@@ -1,5 +1,5 @@
 package hexlet.code;
-import java.util.Scanner; //
+import java.util.Scanner; //Подключаем Класс Scanner
 
 public class Cli {
     public static void userName() {
