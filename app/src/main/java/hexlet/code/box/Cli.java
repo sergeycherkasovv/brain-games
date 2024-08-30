@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet.code.box;
 import java.util.Scanner; //Подключаем Класс Scanner
 
 public class Cli {

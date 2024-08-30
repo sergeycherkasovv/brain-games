@@ -1,9 +1,9 @@
-package hexlet.code;
+package hexlet.code.box;
 import java.util.Random; //Импортируем Класс Random
 import java.util.Scanner; //Подключаем Класс Scanner
 
-public class Even {
-    public static void evenParity() {
+public final class Even {
+    public static void even() {
         Random random = new Random();  //Создали объект Random
         Scanner scanner = new Scanner(System.in); //Создали объект Scanner
 
@@ -23,7 +23,7 @@ public class Even {
 
             System.out.println("Question: " + randomNumber);
             String userAnswer = scanner.nextLine(); //Игрок вводит свой ответ yes или no
-            System.out.println("Your answer: " + userAnswer); //Вывадится ответ игрока
+            System.out.println("Your answer: " + userAnswer); //Выводится ответ игрока
 
             int evenNumberRandom = randomNumber % 2; //Остаток от деления в отдельной переменной
                                                      //так меньше кода в условиях if and else if
