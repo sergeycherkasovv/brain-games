@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
-import java.util.Random;
+import hexlet.code.Engine; //Импортируем "Движок" Engine
+import java.util.Random; //Импортируем Класс Random
 
 public class Even2 {
     public static void even() {

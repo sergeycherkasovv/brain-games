@@ -15,7 +15,7 @@ public class Calc {
         // Начало игры Calc
         System.out.println("What is the result of the expression?");
 
-        var flag = true;
+        boolean flag = true;
         for (int i = 0; i < 3; i++) {
 
             var number1 = random.nextInt(100); //Первое число
