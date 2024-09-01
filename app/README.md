@@ -8,3 +8,7 @@
 
 ## Step 7
 ### [Video game GCD](https://asciinema.org/a/tLVZJJBQBG6oX7IjiWnZEsU1z)
+
+## Step 8
+### [Video game Progression](https://asciinema.org/a/zQR1KAS9XJB7AXoN4ATJMVoXX)
+

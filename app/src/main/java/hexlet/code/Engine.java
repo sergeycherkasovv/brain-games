@@ -47,7 +47,7 @@ public class Engine {
     //Выводится если ответ не правильный
     public static void stringwrongAnswer(String name, String expectation, String output) {
         System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s.", expectation, output);
-        System.out.println("\nLet's try again, " + name);;
+        System.out.println("\nLet's try again, " + name + "!");;
     }
 
     //Выводится таска
