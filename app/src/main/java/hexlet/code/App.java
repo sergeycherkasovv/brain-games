@@ -1,10 +1,7 @@
 package hexlet.code;
-import hexlet.code.games.Even2;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
-import  hexlet.code.games.Calc;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
 
 public class App {
     public static void main(String[] args) {
@@ -17,15 +14,16 @@ public class App {
                         + "\n3 - Calc"
                         + "\n4 - GCD"
                         + "\n5 - Progression"
+                        + "\n6 - Prime"
                         + "\n0 - Exit");
         var numberGame = scanner.nextInt();
         System.out.println("Your choice: " + numberGame);
 
         switch (numberGame) {
             case 1:
-                Engine.userName();
+                System.out.println(Engine.userName());
                 String name = Engine.userEntersString();
-                Engine.helloUserName(name);
+                System.out.println(Engine.helloUserName(name));
                 break;
             case 2:
                 Even2.even();
@@ -38,6 +36,9 @@ public class App {
                 break;
             case 5:
                 Progression.progression();
+                break;
+            case 6:
+                Prime.prime();
                 break;
             case 0:
                 break;

@@ -7,9 +7,9 @@ public class Calc {
     public static void calculated () {
         var random = new Random();  //Создали объект Random
 
-        Engine.userName(); //Узнать имя игрока
+        System.out.println(Engine.userName()); //Узнать имя игрока
         String name = Engine.userEntersString(); //Игрок вводит имя и для завершения нажимает Enter
-        Engine.helloUserName(name); // Приветсвие игрока
+        System.out.println(Engine.helloUserName(name)); // Приветсвие игрока
 
 
         // Начало игры Calc
@@ -40,15 +40,15 @@ public class Calc {
                     break;
             }
 
-            Engine.questionTask(sumString); //Задается вопрос
+            System.out.println(Engine.questionTask(sumString)); //Задается вопрос
             int userAnswer = Engine.userEntersInt(); //Игрок вводит свой ответ
-            Engine.yourAnswer(String.valueOf(userAnswer)); //Выводится ответ игрока
+            System.out.println(Engine.yourAnswer(String.valueOf(userAnswer))); //Выводится ответ игрока
 
             if (sumInt == userAnswer) {
-                Engine.correct(); //Подтверждается правильность ответа
+                System.out.println(Engine.correct()); //Подтверждается правильность ответа
             } else {
                 //Выводится если ответ не верный
-                Engine.stringwrongAnswer(name, String.valueOf(userAnswer), String.valueOf(sumInt));
+                System.out.println(Engine.stringwrongAnswer(name, String.valueOf(userAnswer), String.valueOf(sumInt)));
                 flag = false; //И переменная flag меняет свое значение на false
                 break;
             }
@@ -56,7 +56,7 @@ public class Calc {
             }
         if (flag) {
             //Если игрок три раза ответил правильно то его хвалят
-            Engine.congratulations(name);
+            System.out.println(Engine.congratulations(name));
         }
     }
 }

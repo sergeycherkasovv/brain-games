@@ -9,9 +9,9 @@ public class Progression {
     public static void progression() {
         var random = new Random();  //Создали объект Random
 
-        Engine.userName(); //Узнать имя игрока
+        System.out.println(Engine.userName()); //Узнать имя игрока
         String name = Engine.userEntersString(); //Игрок вводит имя и для завершения нажимает Enter
-        Engine.helloUserName(name); // Приветсвие игрока
+        System.out.println(Engine.helloUserName(name)); // Приветсвие игрока
 
         // Начало игры GCD
         System.out.println("What number is missing in the progression?");
@@ -44,15 +44,15 @@ public class Progression {
                 arrayFromString.append(item + " ");
             }
 
-            Engine.questionTask(String.valueOf(arrayFromString)); //Задается вопрос
+            System.out.println(Engine.questionTask(String.valueOf(arrayFromString))); //Задается вопрос
             int userAnswer = Engine.userEntersInt(); //Игрок вводит свой ответ
-            Engine.yourAnswer(String.valueOf(userAnswer)); //Выводится ответ игрока
+            System.out.println(Engine.yourAnswer(String.valueOf(userAnswer))); //Выводится ответ игрока
 
             if (num == userAnswer) {
-                Engine.correct(); //Подтверждается правильность ответа
+                System.out.println(Engine.correct()); //Подтверждается правильность ответа
             } else {
                 //Выводится если ответ не верный
-                Engine.stringwrongAnswer(name, String.valueOf(userAnswer), String.valueOf(num));
+                System.out.println(Engine.stringwrongAnswer(name, String.valueOf(userAnswer), String.valueOf(num)));
                 flag = false; //И переменная flag меняет свое значение на false
                 break;
             }
@@ -60,7 +60,7 @@ public class Progression {
         }
         if (flag) {
             //Если игрок три раза ответил правильно то его хвалят
-            Engine.congratulations(name);
+            System.out.println(Engine.congratulations(name));
         }
     }
 }

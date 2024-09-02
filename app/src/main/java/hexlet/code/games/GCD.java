@@ -7,9 +7,9 @@ public class GCD {
     public static void gcd() {
         var random = new Random();  //Создали объект Random
 
-        Engine.userName(); //Узнать имя игрока
+        System.out.println(Engine.userName()); //Узнать имя игрока
         String name = Engine.userEntersString(); //Игрок вводит имя и для завершения нажимает Enter
-        Engine.helloUserName(name); // Приветсвие игрока
+        System.out.println(Engine.helloUserName(name)); // Приветсвие игрока
 
         // Начало игры GCD
         System.out.println("Find the greatest common divisor of given numbers.");
@@ -31,15 +31,15 @@ public class GCD {
 
             var questionString = number1 + " " + number2; //Преобразуем два числа в String для вопроса
 
-            Engine.questionTask(questionString); //Задается вопрос
+            System.out.println(Engine.questionTask(questionString)); //Задается вопрос
             int userAnswer = Engine.userEntersInt(); //Игрок вводит свой ответ
-            Engine.yourAnswer(String.valueOf(userAnswer)); //Выводится ответ игрока
+            System.out.println(Engine.yourAnswer(String.valueOf(userAnswer))); //Выводится ответ игрока
 
             if (result == userAnswer) {
-                Engine.correct(); //Подтверждается правильность ответа
+                System.out.println(Engine.correct()); //Подтверждается правильность ответа
             } else {
                 //Выводится если ответ не верный
-                Engine.stringwrongAnswer(name, String.valueOf(userAnswer), String.valueOf(result));
+                System.out.println(Engine.stringwrongAnswer(name, String.valueOf(userAnswer), String.valueOf(result)));
                 flag = false; //И переменная flag меняет свое значение на false
                 break;
             }
@@ -47,7 +47,7 @@ public class GCD {
         }
         if (flag) {
             //Если игрок три раза ответил правильно то его хвалят
-            Engine.congratulations(name);
+            System.out.println(Engine.congratulations(name));
         }
     }
 }

@@ -5,19 +5,21 @@ public class Engine {
 
     ////////////////////////////////////////////Выводится после выбора игры
     //Спрашивается имя
-    public static void userName() {
-        System.out.println("May I have your name?"); //Узнать имя игрока
+    public static String userName() {
+
+        return "May I have your name?"; //Узнать имя игрока
     }
 
     //Приветсвуется User
-    public static void helloUserName(String name) {
-        System.out.println("Hello, " + name + "!"); // Приветсвие игрока
+    public static String helloUserName(String name) {
+
+        return "Hello, " + name + "!"; // Приветсвие игрока
     }
 
 
     /////////////////////////////////////////////User вводит данные
     //User вводит строку
-    public static String userEntersString(){
+    public static String userEntersString() {
         Scanner scanner = new Scanner(System.in); //Создали объект Scanner
         String userEnter = scanner.nextLine();
         //scanner.close(); //Завершает работу с пользователем
@@ -35,29 +37,39 @@ public class Engine {
 
     ///////////////////////////////////////////////ОТВЕТЫ
     //Вывод при правильном ответе
-    public static void correct() {
-        System.out.println("Correct!");
+    public static String correct() {
+
+        return "Correct!";
     }
 
     //Выводится при привильных ответах
-    public static void congratulations(String name) {
-        System.out.println("Congratulations, " + name + "!");
+    public static String congratulations(String name) {
+
+        return "Congratulations, " + name + "!";
     }
 
     //Выводится если ответ не правильный
-    public static void stringwrongAnswer(String name, String expectation, String output) {
-        System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s.", expectation, output);
-        System.out.println("\nLet's try again, " + name + "!");;
+    public static String stringwrongAnswer(String name, String expectation, String output) {
+        return "'"
+                + expectation
+                + "' is wrong answer ;(. Correct answer was '"
+                + output
+                + "'."
+                + "\nLet's try again, "
+                + name
+                + "!";
     }
 
     //Выводится таска
-    public static void questionTask(String tusk) {
-        System.out.println("Question: " + tusk);
+    public static String questionTask(String tusk) {
+
+        return "Question: " + tusk;
     }
 
     //Выводится ответ игрока
-    public static void yourAnswer(String answer) {
-        System.out.println("Your answer: " + answer);
+    public static String yourAnswer(String answer) {
+
+        return "Your answer: " + answer;
     }
 
 }

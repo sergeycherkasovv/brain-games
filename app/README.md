@@ -12,3 +12,5 @@
 ## Step 8
 ### [Video game Progression](https://asciinema.org/a/zQR1KAS9XJB7AXoN4ATJMVoXX)
 
+## Step 9
+### [Video game Prime](https://asciinema.org/a/vLUc3UJGKjHJsXXZ5muai74zC)
