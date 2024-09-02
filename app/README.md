@@ -1,4 +1,10 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/644fe54243088980957b/maintainability)](https://codeclimate.com/github/sergeycherkasovv/java-project-61/maintainability)
+[![hexlet-check](https://github.com/sergeycherkasovv/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/sergeycherkasovv/java-project-61/actions/workflows/hexlet-check.yml)
+## Run-dist
+
+```bash
+make run-dist
+```
 
 ## Step 5 
 ### [Video game Even](https://asciinema.org/a/Zj9FJBsuyLuDTekoNl6HdrR6p)

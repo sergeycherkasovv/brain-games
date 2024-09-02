@@ -21,17 +21,13 @@ public class Engine {
     //User вводит строку
     public static String userEntersString() {
         Scanner scanner = new Scanner(System.in); //Создали объект Scanner
-        String userEnter = scanner.nextLine();
-        //scanner.close(); //Завершает работу с пользователем
-        return userEnter;
+        return scanner.nextLine();
     }
 
     //User вводит число типа int
     public static int userEntersInt() {
         Scanner scanner2 = new Scanner(System.in); //Создали объект Scanner
-        int userEnter = scanner2.nextInt();
-        //scanner2.close(); //Завершает работу с пользователем
-        return userEnter;
+        return scanner2.nextInt();
     }
 
 
