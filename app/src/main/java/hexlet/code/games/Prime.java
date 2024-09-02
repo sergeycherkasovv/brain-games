@@ -22,11 +22,11 @@ public class Prime {
             //Если число равно 2 или 3 то нет смычла
             if (number == 2 || number == 3) {
                 answerYesOrNo = "yes";
-            } else if (number == 0 || number == 1) {
+            } else if (number <= 1) {
                 answerYesOrNo = "no";
             } else {
                 int halfNumber = number / 2;
-                for (int j = 2; j < halfNumber; j++) {
+                for (int j = 2; j < number; j++) {
                     if (number % j == 0) {
                         answerYesOrNo = "no";
                         break;
