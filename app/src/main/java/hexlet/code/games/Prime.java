@@ -20,8 +20,10 @@ public class Prime {
             String answerYesOrNo = new String("yes"); //
 
             //Если число равно 2 или 3 то нет смычла
-            if(number == 2 || number == 3) {
+            if (number == 2 || number == 3) {
                 answerYesOrNo = "yes";
+            } else if (number == 0 || number == 1) {
+                answerYesOrNo = "no";
             } else {
                 int halfNumber = number / 2;
                 for (int j = 2; j < halfNumber; j++) {
