@@ -31,7 +31,7 @@ public class GCD {
 
             var questionString = number1 + " " + number2; //Преобразуем два числа в String для вопроса
 
-            System.out.println(Engine.questionTask(questionString)); //Задается вопрос
+            System.out.println(Engine.questionTask(String.valueOf(number1), String.valueOf(number2))); //Задается вопрос
             int userAnswer = Engine.userEntersInt(); //Игрок вводит свой ответ
             System.out.println(Engine.yourAnswer(String.valueOf(userAnswer))); //Выводится ответ игрока
 

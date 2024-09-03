@@ -57,6 +57,9 @@ public class Engine {
     }
 
     //Выводится таска
+    public static String questionTask(String tusk1, String tusk2) {
+        return "Question: " + tusk1 + " " + tusk2;
+    }
     public static String questionTask(String tusk) {
 
         return "Question: " + tusk;
