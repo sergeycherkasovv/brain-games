@@ -3,73 +3,38 @@ import java.util.Scanner; //Подключаем Класс Scanner
 
 public class Engine {
 
-    ////////////////////////////////////////////Выводится после выбора игры
-    //Спрашивается имя
-    public static String userName() {
+    public static final int ROUNDS_COUNT = 3;
 
-        return "May I have your name?"; //Узнать имя игрока
-    }
-
-    //Приветсвуется User
-    public static String helloUserName(String name) {
-
-        return "Hello, " + name + "!"; // Приветсвие игрока
-    }
-
-
-    /////////////////////////////////////////////User вводит данные
-    //User вводит строку
-    public static String userEntersString() {
+    public static void run(String[][] rounds, String rulesGame) {
         Scanner scanner = new Scanner(System.in); //Создали объект Scanner
-        return scanner.nextLine();
+
+        System.out.println("May I have your name?"); //Узнать имя игрока
+        String userName = scanner.nextLine();
+        System.out.println("Hello, " + userName + "!"); // Приветсвие игрока
+
+        System.out.println(rulesGame);
+        for (String[] round : rounds) {
+            System.out.println("Question: " + round[0]);
+            String userAnswer = scanner.nextLine();
+            System.out.println("Your answer: " + userAnswer);
+
+            if (userAnswer.equals(round[1])) {
+                System.out.println("Correct!");
+            } else {
+                System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.", userAnswer, round[1]);
+                System.out.println("\nLet's try again, " + userName + "!");
+                return;
+            }
+        }
+        System.out.println("Congratulations, " + userName + "!");
     }
 
-    //User вводит число типа int
-    public static int userEntersInt() {
-        Scanner scanner2 = new Scanner(System.in); //Создали объект Scanner
-        return scanner2.nextInt();
+    public static void run () {
+        Scanner scanner = new Scanner(System.in); //Создали объект Scanner
+
+        System.out.println("May I have your name?"); //Узнать имя игрока
+        String userName = scanner.nextLine();
+        System.out.println("Hello, " + userName + "!"); // Приветсвие игрока
     }
-
-
-    ///////////////////////////////////////////////ОТВЕТЫ
-    //Вывод при правильном ответе
-    public static String correct() {
-
-        return "Correct!";
-    }
-
-    //Выводится при привильных ответах
-    public static String congratulations(String name) {
-
-        return "Congratulations, " + name + "!";
-    }
-
-    //Выводится если ответ не правильный
-    public static String stringwrongAnswer(String name, String expectation, String output) {
-        return "'"
-                + expectation
-                + "' is wrong answer ;(. Correct answer was '"
-                + output
-                + "'."
-                + "\nLet's try again, "
-                + name
-                + "!";
-    }
-
-    //Выводится таска
-    public static String questionTask(String tusk1, String tusk2) {
-        return "Question: " + tusk1 + " " + tusk2;
-    }
-    public static String questionTask(String tusk) {
-
-        return "Question: " + tusk;
-    }
-
-    //Выводится ответ игрока
-    public static String yourAnswer(String answer) {
-
-        return "Your answer: " + answer;
-    }
-
 }
 
