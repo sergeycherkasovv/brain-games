@@ -13,13 +13,20 @@ public class App {
 
         Scanner scanner = new Scanner(System.in); //Создали объект Scanner
         System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Great"
-                        + "\n2 - Even"
-                        + "\n3 - Calc"
-                        + "\n4 - GCD"
-                        + "\n5 - Progression"
-                        + "\n6 - Prime"
-                        + "\n0 - Exit");
+        System.out.println("""
+                1 - Great\
+                
+                2 - Even\
+                
+                3 - Calc\
+                
+                4 - GCD\
+                
+                5 - Progression\
+                
+                6 - Prime\
+                
+                0 - Exit""");
         var numberGame = scanner.nextInt();
         System.out.println("Your choice: " + numberGame);
 
