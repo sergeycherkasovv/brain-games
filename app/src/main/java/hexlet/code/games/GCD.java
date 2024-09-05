@@ -4,50 +4,39 @@ import hexlet.code.Engine; //Импортируем "Движок" Engine
 import java.util.Random; //Импортируем Класс Random
 
 public class GCD {
-    public static void gcd() {
-        var random = new Random();  //Создали объект Random
+    public static final int NUMBER_START = 1;
+    public static final int NUMBER_LIMIT = 100;
 
-        System.out.println(Engine.userName()); //Узнать имя игрока
-        String name = Engine.userEntersString(); //Игрок вводит имя и для завершения нажимает Enter
-        System.out.println(Engine.helloUserName(name)); // Приветсвие игрока
+    public static void run() {
+        var questions = new String[Engine.ROUNDS_COUNT][];
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            questions[i] = generateRound();
+        }
+        var rulesGame = "Find the greatest common divisor of given numbers.";
+        Engine.run(questions, rulesGame);
+    }
 
-        // Начало игры GCD
-        System.out.println("Find the greatest common divisor of given numbers.");
+    public static String[] generateRound() {
+        var firstNumber = new Random().nextInt(NUMBER_START, NUMBER_LIMIT);
+        var secondNumber = new Random().nextInt(NUMBER_START, NUMBER_LIMIT);
+        var numberMin = Math.min(firstNumber, secondNumber); //Находим наименьшее число
 
-        boolean flag = true;
-        for (int i = 0; i < 3; i++) {
-            int number1 = random.nextInt(100); //Первое число
-            int number2 = random.nextInt(100); //Второе число
+        var correctAnswer = findGreatestDivisor(firstNumber, secondNumber, numberMin);
+        var question = String.valueOf(firstNumber) + " " + String.valueOf(secondNumber);
 
-            int number3 = Math.min(number1, number2); //Находится наименьшее число
+        return new String[]{question, correctAnswer};
 
-            int result = number3; //Наименьший делитиль
-            while (true) {
-                if(number1 % result == 0 && number2 % result == 0) {
-                    break;
-                }
-                result --;
-            }
+    }
 
-            var questionString = number1 + " " + number2; //Преобразуем два числа в String для вопроса
+    public static String findGreatestDivisor(int firstNumber, int secondNumber, int numberMin) {
+        int greatestDivisor = numberMin;
 
-            System.out.println(Engine.questionTask(String.valueOf(number1), String.valueOf(number2))); //Задается вопрос
-            int userAnswer = Engine.userEntersInt(); //Игрок вводит свой ответ
-            System.out.println(Engine.yourAnswer(String.valueOf(userAnswer))); //Выводится ответ игрока
-
-            if (result == userAnswer) {
-                System.out.println(Engine.correct()); //Подтверждается правильность ответа
-            } else {
-                //Выводится если ответ не верный
-                System.out.println(Engine.stringwrongAnswer(name, String.valueOf(userAnswer), String.valueOf(result)));
-                flag = false; //И переменная flag меняет свое значение на false
+        while (true) {
+            if (firstNumber % greatestDivisor == 0 && secondNumber % greatestDivisor == 0) {
                 break;
             }
-
+            greatestDivisor --;
         }
-        if (flag) {
-            //Если игрок три раза ответил правильно то его хвалят
-            System.out.println(Engine.congratulations(name));
-        }
+        return String.valueOf(greatestDivisor);
     }
 }

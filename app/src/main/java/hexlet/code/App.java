@@ -1,5 +1,9 @@
 package hexlet.code;
-import hexlet.code.games.*;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
 
 import java.util.Scanner;
 
@@ -21,24 +25,22 @@ public class App {
 
         switch (numberGame) {
             case 1:
-                System.out.println(Engine.userName());
-                String name = Engine.userEntersString();
-                System.out.println(Engine.helloUserName(name));
+                Engine.run();
                 break;
             case 2:
-                Even2.even();
+                Even.run();
                 break;
             case 3:
-                Calc.calculated();
+                Calc.run();
                 break;
             case 4:
-                GCD.gcd();
+                GCD.run();
                 break;
             case 5:
-                Progression.progression();
+                Progression.run();
                 break;
             case 6:
-                Prime.prime();
+                Prime.run();
                 break;
             case 0:
                 break;

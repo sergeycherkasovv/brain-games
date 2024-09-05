@@ -4,19 +4,21 @@ import hexlet.code.Engine; //Импортируем "Движок" Engine
 import java.util.Random; //Импортируем Класс Random
 
 public class Progression {
+    public static final int NUMBER_START = 1;
+    public static final int NUMBER_LIMIT = 100;
 
     public static void run() {
-        var questions = new String[3][];
+        var questions = new String[Engine.ROUNDS_COUNT][];
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             questions[i] = generateRound();
         }
-        var rulesGame = "AWhat number is missing in the progression?";
+        var rulesGame = "What number is missing in the progression?";
         Engine.run(questions, rulesGame);
     }
     public static String[] generateRound() {
-        var firstValue = new Random().nextInt(1, 100); //Первое число
+        var firstValue = new Random().nextInt(NUMBER_START, NUMBER_LIMIT); //Первое число
         var step = new Random().nextInt(5, 11); //Количесво чисел
-        var count = new Random().nextInt(1, 100); //Шаг прогрессии
+        var count = new Random().nextInt(NUMBER_START, NUMBER_LIMIT); //Шаг прогрессии
         var hid = new Random().nextInt(step); //Индекс значения которое нужно скрыть
 
         var progression = generateProgression(firstValue, step, count);
