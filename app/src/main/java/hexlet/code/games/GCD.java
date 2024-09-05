@@ -22,7 +22,7 @@ public class GCD {
         var numberMin = Math.min(firstNumber, secondNumber); //Находим наименьшее число
 
         var correctAnswer = findGreatestDivisor(firstNumber, secondNumber, numberMin);
-        var question = String.valueOf(firstNumber) + " " + String.valueOf(secondNumber);
+        var question = firstNumber + " " + secondNumber;
 
         return new String[]{question, correctAnswer};
 
