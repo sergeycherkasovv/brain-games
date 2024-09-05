@@ -29,7 +29,7 @@ public class Calc {
             case 1 -> symbol = '-';
             case 2 -> symbol = '*';
             default -> throw new RuntimeException("unknown number");
-        };
+        }
 
         var calculatedAnswer = calculated(firstNumber, secondNumber,symbol);
         var calculatedQuestions = calculatedString(firstNumber, secondNumber, symbol);
