@@ -21,28 +21,28 @@ public class Calc {
     public static String[] generateRound() {
         var firstNumber = new Random().nextInt(NUMBER_START, NUMBER_LIMIT); //Первое число
         var secondNumber = new Random().nextInt(NUMBER_START, NUMBER_LIMIT); //Второе число
-        var operator = new Random().nextInt(NUMBER_OPERATOR);//Выполяет число в диапозоне от 0 до 3
+        var operator = new Random().nextInt(NUMBER_OPERATOR); //Выполяет число в диапозоне от 0 до 3
                                                     //для того чтобы выбрать один из операторов +, -, *
         char symbol;
-        switch (operator) {
-            case 0 -> symbol = '+';
-            case 1 -> symbol = '-';
-            case 2 -> symbol = '*';
-            default -> throw new RuntimeException("unknown number");
-        }
+        symbol = switch (operator) {
+            case 0 -> '+';
+            case 1 -> '-';
+            case 2 -> '*';
+            default -> throw new RuntimeException("Unknown number");
+        };
 
-        var calculatedAnswer = calculated(firstNumber, secondNumber,symbol);
+        var calculatedAnswer = calculatedInt(firstNumber, secondNumber, symbol);
         var calculatedQuestions = calculatedString(firstNumber, secondNumber, symbol);
 
-        return new String[]{calculatedQuestions, calculatedAnswer};
+        return new String[]{calculatedQuestions, String.valueOf(calculatedAnswer)};
     }
 
-    public static String calculated(int firstNumber, int secondNumber, char symbol) {
+    public static int calculatedInt(int firstNumber, int secondNumber, char symbol) {
         return switch (symbol) {
-            case '+' -> String.valueOf(firstNumber + secondNumber);
-            case '-' -> String.valueOf(firstNumber - secondNumber);
-            case '*' -> String.valueOf(firstNumber * secondNumber);
-            default -> throw new RuntimeException("unknown operator");
+            case '+' -> firstNumber + secondNumber;
+            case '-' -> firstNumber - secondNumber;
+            case '*' -> firstNumber * secondNumber;
+            default -> throw new RuntimeException("Unknown operator");
         };
     }
 
@@ -51,7 +51,7 @@ public class Calc {
             case '+' -> firstNumber + " + " + secondNumber;
             case '-' -> firstNumber + " - " + secondNumber;
             case '*' -> firstNumber + " * " + secondNumber;
-            default -> throw new RuntimeException("unknown operator");
+            default -> throw new RuntimeException("Unknown operator");
         };
     }
 }

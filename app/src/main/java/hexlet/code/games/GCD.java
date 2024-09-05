@@ -35,7 +35,7 @@ public class GCD {
             if (firstNumber % greatestDivisor == 0 && secondNumber % greatestDivisor == 0) {
                 break;
             }
-            greatestDivisor --;
+            greatestDivisor--;
         }
         return String.valueOf(greatestDivisor);
     }

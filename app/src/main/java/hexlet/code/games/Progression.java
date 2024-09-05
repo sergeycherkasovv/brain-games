@@ -6,6 +6,8 @@ import java.util.Random; //Импортируем Класс Random
 public class Progression {
     public static final int NUMBER_START = 1;
     public static final int NUMBER_LIMIT = 100;
+    public static final int STEP_START = 5;
+    public static final int STEP_LIMIT = 11;
 
     public static void run() {
         var questions = new String[Engine.ROUNDS_COUNT][];
@@ -17,7 +19,7 @@ public class Progression {
     }
     public static String[] generateRound() {
         var firstValue = new Random().nextInt(NUMBER_START, NUMBER_LIMIT); //Первое число
-        var step = new Random().nextInt(5, 11); //Количесво чисел
+        var step = new Random().nextInt(STEP_START, STEP_LIMIT); //Количесво чисел
         var count = new Random().nextInt(NUMBER_START, NUMBER_LIMIT); //Шаг прогрессии
         var hid = new Random().nextInt(step); //Индекс значения которое нужно скрыть
 

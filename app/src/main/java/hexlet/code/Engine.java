@@ -29,7 +29,7 @@ public class Engine {
         System.out.println("Congratulations, " + userName + "!");
     }
 
-    public static void run () {
+    public static void run() {
         Scanner scanner = new Scanner(System.in); //Создали объект Scanner
 
         System.out.println("May I have your name?"); //Узнать имя игрока
