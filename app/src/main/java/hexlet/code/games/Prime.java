@@ -26,10 +26,6 @@ public class Prime {
     public static boolean isPrime(int number) {
         boolean numberPrime = true;
 
-        if (number == 2 || number == 3) {
-            numberPrime = true;
-        }
-
         for (int i = 2; i < number; i++) {
             if (number % i == 0) {
                 numberPrime = false;
