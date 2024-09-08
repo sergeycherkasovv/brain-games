@@ -5,4 +5,9 @@ public class Utils {
     public static int generateRandomNumber(int start, int limit) {
         return new Random().nextInt(start, limit);
     }
+
+    public static int generateRandomNumber(int limit) {
+        return new Random().nextInt(limit);
+    }
+
 }
