@@ -56,6 +56,5 @@ public class App {
             default:
                 throw new RuntimeException("Unknown Game");
         }
-        scanner.close(); //Завершает работу с пользователем
     }
 }
