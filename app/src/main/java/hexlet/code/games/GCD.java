@@ -20,17 +20,16 @@ public class GCD {
     public static String[] generateRound() {
         var firstNumber = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);
         var secondNumber = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);
-        var numberMin = Math.min(firstNumber, secondNumber); //Находим наименьшее число
 
-        var correctAnswer = findGreatestDivisor(firstNumber, secondNumber, numberMin);
+        var correctAnswer = findGreatestDivisor(firstNumber, secondNumber);
         var question = firstNumber + " " + secondNumber;
 
         return new String[]{question, correctAnswer};
 
     }
 
-    public static String findGreatestDivisor(int firstNumber, int secondNumber, int numberMin) {
-        int greatestDivisor = numberMin;
+    public static String findGreatestDivisor(int firstNumber, int secondNumber) {
+        int greatestDivisor = Math.min(firstNumber, secondNumber);
 
         while (true) {
             if (firstNumber % greatestDivisor == 0 && secondNumber % greatestDivisor == 0) {
