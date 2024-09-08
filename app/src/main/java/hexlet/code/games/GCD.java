@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine; //Импортируем "Движок" Engine
-import java.util.Random; //Импортируем Класс Random
+import hexlet.code.Utils;
 
 public class GCD {
     public static final int NUMBER_START = 1;
@@ -17,8 +17,8 @@ public class GCD {
     }
 
     public static String[] generateRound() {
-        var firstNumber = new Random().nextInt(NUMBER_START, NUMBER_LIMIT);
-        var secondNumber = new Random().nextInt(NUMBER_START, NUMBER_LIMIT);
+        var firstNumber = Utils.generateRandomNumber(NUMBER_START, NUMBER_LIMIT);
+        var secondNumber = Utils.generateRandomNumber(NUMBER_START, NUMBER_LIMIT);
         var numberMin = Math.min(firstNumber, secondNumber); //Находим наименьшее число
 
         var correctAnswer = findGreatestDivisor(firstNumber, secondNumber, numberMin);

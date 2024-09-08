@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine; //Импортируем "Движок" Engine
-import java.util.Random; //Импортируем Класс Random
+import hexlet.code.Utils;
 
 public class Progression {
     public static final int NUMBER_START = 1;
@@ -18,10 +18,10 @@ public class Progression {
         Engine.run(questions, rulesGame);
     }
     public static String[] generateRound() {
-        var firstValue = new Random().nextInt(NUMBER_START, NUMBER_LIMIT); //Первое число
-        var step = new Random().nextInt(STEP_START, STEP_LIMIT); //Количесво чисел
-        var count = new Random().nextInt(NUMBER_START, NUMBER_LIMIT); //Шаг прогрессии
-        var hid = new Random().nextInt(step); //Индекс значения которое нужно скрыть
+        var firstValue = Utils.generateRandomNumber(NUMBER_START, NUMBER_LIMIT); //Первое число
+        var step = Utils.generateRandomNumber(STEP_START, STEP_LIMIT); //Количесво чисел
+        var count = Utils.generateRandomNumber(NUMBER_START, NUMBER_LIMIT); //Шаг прогрессии
+        var hid = Utils.generateRandomNumber(step); //Индекс значения которое нужно скрыть
 
         var progression = generateProgression(firstValue, step, count);
         var answer = progression[hid]; //Сохраняем верное значение

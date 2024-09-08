@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine; //Импортируем "Движок" Engine
-import java.util.Random; //Импортируем Класс Random
+import hexlet.code.Utils;
 
 public class Even {
     public static final int NUMBER_START = 1;
@@ -18,7 +18,7 @@ public class Even {
     }
 
     public static String[] generateRound() {
-        var number = new Random().nextInt(NUMBER_START, NUMBER_LIMIT);
+        var number = Utils.generateRandomNumber(NUMBER_START, NUMBER_LIMIT);
         var correctAnswer = isEven(number) ? "yes" : "no";
         return new String[]{String.valueOf(number), correctAnswer};
     }

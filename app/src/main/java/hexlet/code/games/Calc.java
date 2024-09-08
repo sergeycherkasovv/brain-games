@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine; //Импортируем "Движок" Engine
-import java.util.Random; //Импортируем Класс Random
+import hexlet.code.Utils;
 
 
 public class Calc {
@@ -19,9 +19,9 @@ public class Calc {
     }
 
     public static String[] generateRound() {
-        var firstNumber = new Random().nextInt(NUMBER_START, NUMBER_LIMIT); //Первое число
-        var secondNumber = new Random().nextInt(NUMBER_START, NUMBER_LIMIT); //Второе число
-        var operator = new Random().nextInt(NUMBER_OPERATOR); //Выполяет число в диапозоне от 0 до 3
+        var firstNumber = Utils.generateRandomNumber(NUMBER_START, NUMBER_LIMIT); //Первое число
+        var secondNumber = Utils.generateRandomNumber(NUMBER_START, NUMBER_LIMIT); //Второе число
+        var operator = Utils.generateRandomNumber(NUMBER_OPERATOR); //Выполяет число в диапозоне от 0 до 3
                                                     //для того чтобы выбрать один из операторов +, -, *
         char symbol;
         symbol = switch (operator) {
