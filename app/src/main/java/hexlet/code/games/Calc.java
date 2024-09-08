@@ -7,7 +7,7 @@ import hexlet.code.Utils;
 public class Calc {
     public static final int START_RANDOM = 1;
     public static final int LIMIT_RANDOM = 100;
-    public static final int OPERATOR_SYMBOL = 3;
+    public static final int RANDOM_SYMBOL = 3;
 
     public static final String[] SYMBOL = new String[]{"+", "-", "*"};
 
@@ -23,7 +23,7 @@ public class Calc {
     public static String[] generateRound() {
         var firstNumber = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM); //Первое число
         var secondNumber = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM); //Второе число
-        var operator = Utils.generateRandomNumber(OPERATOR_SYMBOL); //Выполяет число в диапозоне от 0 до 3
+        var operator = Utils.generateRandomNumber(RANDOM_SYMBOL); //Выполяет число в диапозоне от 0 до 3
                                                     //для того чтобы выбрать один из операторов +, -, *
 
         var calculatedQuestions = questionsCalculated(firstNumber, secondNumber, SYMBOL[operator]);
