@@ -8,14 +8,15 @@ public class Progression {
     public static final int LIMIT_RANDOM = 100;
     public static final int STEP_START = 5;
     public static final int STEP_LIMIT = 11;
+    public static final String RULES_GAME = "What number is missing in the progression?";
 
     public static void run() {
         var questions = new String[Engine.ROUNDS_COUNT][];
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             questions[i] = generateRound();
         }
-        var rulesGame = "What number is missing in the progression?";
-        Engine.run(questions, rulesGame);
+
+        Engine.run(questions, RULES_GAME);
     }
     public static String[] generateRound() {
         var firstValue = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM); //Первое число
