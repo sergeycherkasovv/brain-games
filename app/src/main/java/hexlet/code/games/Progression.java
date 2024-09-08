@@ -4,8 +4,8 @@ import hexlet.code.Engine; //Импортируем "Движок" Engine
 import hexlet.code.Utils;
 
 public class Progression {
-    public static final int NUMBER_START = 1;
-    public static final int NUMBER_LIMIT = 100;
+    public static final int START_RANDOM = 1;
+    public static final int LIMIT_RANDOM = 100;
     public static final int STEP_START = 5;
     public static final int STEP_LIMIT = 11;
 
@@ -18,9 +18,9 @@ public class Progression {
         Engine.run(questions, rulesGame);
     }
     public static String[] generateRound() {
-        var firstValue = Utils.generateRandomNumber(NUMBER_START, NUMBER_LIMIT); //Первое число
+        var firstValue = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM); //Первое число
         var step = Utils.generateRandomNumber(STEP_START, STEP_LIMIT); //Количесво чисел
-        var count = Utils.generateRandomNumber(NUMBER_START, NUMBER_LIMIT); //Шаг прогрессии
+        var count = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM); //Шаг прогрессии
         var hid = Utils.generateRandomNumber(step); //Индекс значения которое нужно скрыть
 
         var progression = generateProgression(firstValue, step, count);

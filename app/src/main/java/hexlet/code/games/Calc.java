@@ -5,9 +5,9 @@ import hexlet.code.Utils;
 
 
 public class Calc {
-    public static final int NUMBER_START = 1;
-    public static final int NUMBER_LIMIT = 100;
-    public static final int NUMBER_OPERATOR = 3;
+    public static final int START_RANDOM = 1;
+    public static final int LIMIT_RANDOM = 100;
+    public static final int OPERATOR = 3;
 
     public static void run() {
         var questions = new String[Engine.ROUNDS_COUNT][];
@@ -19,9 +19,9 @@ public class Calc {
     }
 
     public static String[] generateRound() {
-        var firstNumber = Utils.generateRandomNumber(NUMBER_START, NUMBER_LIMIT); //Первое число
-        var secondNumber = Utils.generateRandomNumber(NUMBER_START, NUMBER_LIMIT); //Второе число
-        var operator = Utils.generateRandomNumber(NUMBER_OPERATOR); //Выполяет число в диапозоне от 0 до 3
+        var firstNumber = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM); //Первое число
+        var secondNumber = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM); //Второе число
+        var operator = Utils.generateRandomNumber(OPERATOR); //Выполяет число в диапозоне от 0 до 3
                                                     //для того чтобы выбрать один из операторов +, -, *
         char symbol;
         symbol = switch (operator) {

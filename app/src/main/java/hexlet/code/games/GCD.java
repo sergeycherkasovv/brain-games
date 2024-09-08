@@ -4,8 +4,8 @@ import hexlet.code.Engine; //Импортируем "Движок" Engine
 import hexlet.code.Utils;
 
 public class GCD {
-    public static final int NUMBER_START = 1;
-    public static final int NUMBER_LIMIT = 100;
+    public static final int START_RANDOM = 1;
+    public static final int LIMIT_RANDOM = 100;
 
     public static void run() {
         var questions = new String[Engine.ROUNDS_COUNT][];
@@ -17,8 +17,8 @@ public class GCD {
     }
 
     public static String[] generateRound() {
-        var firstNumber = Utils.generateRandomNumber(NUMBER_START, NUMBER_LIMIT);
-        var secondNumber = Utils.generateRandomNumber(NUMBER_START, NUMBER_LIMIT);
+        var firstNumber = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);
+        var secondNumber = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);
         var numberMin = Math.min(firstNumber, secondNumber); //Находим наименьшее число
 
         var correctAnswer = findGreatestDivisor(firstNumber, secondNumber, numberMin);
