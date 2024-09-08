@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine; //Импортируем "Движок" Engine
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 
@@ -22,13 +22,12 @@ public class Calc {
     }
 
     public static String[] generateRound() {
-        var firstNumber = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM); //Первое число
-        var secondNumber = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM); //Второе число
-        var operator = Utils.generateRandomNumber(RANDOM_SYMBOL); //Выполяет число в диапозоне от 0 до 3
-                                                    //для того чтобы выбрать один из операторов +, -, *
+        var firstNumber = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);
+        var secondNumber = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);
+        var randomSymbol = Utils.generateRandomNumber(RANDOM_SYMBOL);
 
-        var calculatedQuestions = questionsCalculated(firstNumber, secondNumber, SYMBOL[operator]);
-        var calculatedAnswer = calculated(firstNumber, secondNumber, SYMBOL[operator]);
+        var calculatedQuestions = questionsCalculated(firstNumber, secondNumber, SYMBOL[randomSymbol]);
+        var calculatedAnswer = calculated(firstNumber, secondNumber, SYMBOL[randomSymbol]);
 
         return new String[]{calculatedQuestions, String.valueOf(calculatedAnswer)};
     }

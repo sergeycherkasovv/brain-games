@@ -1,16 +1,16 @@
 package hexlet.code;
-import java.util.Scanner; //Подключаем Класс Scanner
+import java.util.Scanner;
 
 public class Engine {
 
     public static final int ROUNDS_COUNT = 3;
 
     public static void run(String[][] rounds, String rulesGame) {
-        Scanner scanner = new Scanner(System.in); //Создали объект Scanner
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("May I have your name?"); //Узнать имя игрока
+        System.out.println("May I have your name?");
         String userName = scanner.nextLine();
-        System.out.println("Hello, " + userName + "!"); // Приветсвие игрока
+        System.out.println("Hello, " + userName + "!");
 
         System.out.println(rulesGame);
         for (String[] round : rounds) {

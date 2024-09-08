@@ -21,8 +21,8 @@ public class App {
     public static final int PRIME_GAME = 6;
 
     public static void main(String[] args) {
-        System.out.println("Welcome to the Brain Games!"); //Начало игры. Приветсвие
-        Scanner scanner = new Scanner(System.in); //Создали объект Scanner
+        System.out.println("Welcome to the Brain Games!");
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");
 
         System.out.println(GREAT + " - Great");

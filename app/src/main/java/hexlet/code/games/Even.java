@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine; //Импортируем "Движок" Engine
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Even {
