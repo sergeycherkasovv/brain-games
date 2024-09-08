@@ -6,15 +6,15 @@ import hexlet.code.Utils;
 public class Even {
     public static final int START_RANDOM = 1;
     public static final int LIMIT_RANDOM = 100;
-
+    public static final String RULES_GAME = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static void run() {
         var questions = new String[Engine.ROUNDS_COUNT][];
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             questions[i] = generateRound();
         }
-        var rulesGame = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        Engine.run(questions, rulesGame);
+
+        Engine.run(questions, RULES_GAME);
     }
 
     public static String[] generateRound() {
