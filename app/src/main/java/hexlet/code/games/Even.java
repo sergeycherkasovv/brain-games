@@ -4,8 +4,8 @@ import hexlet.code.Engine; //Импортируем "Движок" Engine
 import hexlet.code.Utils;
 
 public class Even {
-    public static final int NUMBER_START = 1;
-    public static final int NUMBER_LIMIT = 100;
+    public static final int START = 1;
+    public static final int LIMIT = 100;
 
 
     public static void run() {
@@ -18,7 +18,7 @@ public class Even {
     }
 
     public static String[] generateRound() {
-        var number = Utils.generateRandomNumber(NUMBER_START, NUMBER_LIMIT);
+        var number = Utils.generateRandomNumber(START, LIMIT);
         var correctAnswer = isEven(number) ? "yes" : "no";
         return new String[]{String.valueOf(number), correctAnswer};
     }
