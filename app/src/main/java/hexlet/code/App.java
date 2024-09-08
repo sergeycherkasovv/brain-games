@@ -1,10 +1,7 @@
 package hexlet.code;
-import hexlet.code.games.Prime;
-import hexlet.code.games.Progression;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
+import hexlet.code.games.*;
 
+import javax.swing.event.CaretListener;
 import java.util.Scanner;
 
 public class App {
@@ -34,7 +31,7 @@ public class App {
 
         switch (numberGame) {
             case GREAT:
-                Engine.run();
+                Cli.run();
                 break;
             case EVEN_GAME:
                 Even.run();
