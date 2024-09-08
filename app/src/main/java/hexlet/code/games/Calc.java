@@ -8,6 +8,7 @@ public class Calc {
     public static final int START_RANDOM = 1;
     public static final int LIMIT_RANDOM = 100;
     public static final int RANDOM_SYMBOL = 3;
+    public static final String RULES_GAME = "What is the result of the expression?";
 
     public static final String[] SYMBOL = new String[]{"+", "-", "*"};
 
@@ -16,8 +17,8 @@ public class Calc {
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             questions[i] = generateRound();
         }
-        var rulesGame = "What is the result of the expression?";
-        Engine.run(questions, rulesGame);
+
+        Engine.run(questions, RULES_GAME);
     }
 
     public static String[] generateRound() {
