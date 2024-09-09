@@ -24,11 +24,11 @@ public class GCD {
         var correctAnswer = findGreatestDivisor(firstNumber, secondNumber);
         var question = firstNumber + " " + secondNumber;
 
-        return new String[]{question, correctAnswer};
+        return new String[]{question, String.valueOf(correctAnswer)};
 
     }
 
-    public static String findGreatestDivisor(int firstNumber, int secondNumber) {
+    public static int findGreatestDivisor(int firstNumber, int secondNumber) {
         int greatestDivisor = Math.min(firstNumber, secondNumber);
 
         while (true) {
@@ -37,6 +37,6 @@ public class GCD {
             }
             greatestDivisor--;
         }
-        return String.valueOf(greatestDivisor);
+        return greatestDivisor;
     }
 }
