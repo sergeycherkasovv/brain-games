@@ -16,5 +16,4 @@ public class Utils {
     public static int generateRandomNumber() {
         return generateRandomNumber(START_RANDOM, LIMIT_RANDOM);
     }
-
 }
