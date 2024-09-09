@@ -4,8 +4,6 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
-    public static final int START_RANDOM = 1;
-    public static final int LIMIT_RANDOM = 100;
     public static final int STEP_START = 5;
     public static final int STEP_LIMIT = 11;
     public static final String RULES_GAME = "What number is missing in the progression?";
@@ -19,9 +17,9 @@ public class Progression {
         Engine.run(questions, RULES_GAME);
     }
     public static String[] generateRound() {
-        var firstValue = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);
+        var firstValue = Utils.generateRandomNumber();
         var lengthArray = Utils.generateRandomNumber(STEP_START, STEP_LIMIT);
-        var step = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);
+        var step = Utils.generateRandomNumber();
         var hidTheValue = Utils.generateRandomNumber(lengthArray);
 
         var progression = generateProgression(firstValue, lengthArray, step);

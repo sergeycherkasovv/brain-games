@@ -4,8 +4,6 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Even {
-    public static final int START_RANDOM = 1;
-    public static final int LIMIT_RANDOM = 100;
     public static final String RULES_GAME = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static void run() {
@@ -18,7 +16,7 @@ public class Even {
     }
 
     public static String[] generateRound() {
-        var number = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);
+        var number = Utils.generateRandomNumber();
         var correctAnswer = isEven(number) ? "yes" : "no";
         return new String[]{String.valueOf(number), correctAnswer};
     }

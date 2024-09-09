@@ -4,8 +4,6 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Prime {
-    public static final int START_RANDOM = 1;
-    public static final int LIMIT_RANDOM = 100;
     public static final String RULES_GAME = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static void run() {
@@ -18,7 +16,7 @@ public class Prime {
     }
 
     public static String[] generateRound() {
-        var number = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);
+        var number = Utils.generateRandomNumber();
         var correctAnswer = isPrime(number) ? "yes" : "no";
 
         return new String[]{String.valueOf(number), correctAnswer};

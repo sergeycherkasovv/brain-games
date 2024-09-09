@@ -5,9 +5,7 @@ import hexlet.code.Utils;
 
 
 public class Calc {
-    public static final int START_RANDOM = 1;
-    public static final int LIMIT_RANDOM = 100;
-    public static final int RANDOM_SYMBOL = 3;
+    public static final int RANDOM_SYMBOL_LIMIT = 3;
     public static final String RULES_GAME = "What is the result of the expression?";
 
     public static final String[] SYMBOL = new String[]{"+", "-", "*"};
@@ -22,9 +20,9 @@ public class Calc {
     }
 
     public static String[] generateRound() {
-        var firstNumber = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);
-        var secondNumber = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);
-        var randomSymbol = Utils.generateRandomNumber(RANDOM_SYMBOL);
+        var firstNumber = Utils.generateRandomNumber();
+        var secondNumber = Utils.generateRandomNumber();
+        var randomSymbol = Utils.generateRandomNumber(RANDOM_SYMBOL_LIMIT);
 
         var calculatedQuestions = questionsCalculated(firstNumber, secondNumber, SYMBOL[randomSymbol]);
         var calculatedAnswer = calculated(firstNumber, secondNumber, SYMBOL[randomSymbol]);
