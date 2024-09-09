@@ -10,7 +10,7 @@ public class Utils {
     }
 
     public static int generateRandomNumber(int limit) {
-        return generateRandomNumber(0,limit);
+        return generateRandomNumber(0, limit);
     }
 
     public static int generateRandomNumber() {
