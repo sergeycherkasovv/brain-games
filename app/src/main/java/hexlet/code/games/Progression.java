@@ -32,12 +32,10 @@ public class Progression {
 
     private static String[] generateProgression(int firstValue, int lengthArray, int step) {
         String[] progressionArray = new String[lengthArray];
-        int nextNumber = firstValue;
 
-        //Наполняем массив числами прогрессии
         for (int i = 0; i < lengthArray; i++) {
-            progressionArray[i] = String.valueOf(nextNumber);
-            nextNumber += step;
+            progressionArray[i] = String.valueOf(firstValue);
+            firstValue += step;
         }
         return progressionArray;
     }
