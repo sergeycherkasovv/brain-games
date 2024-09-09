@@ -3,10 +3,10 @@ import java.util.Scanner; //Подключаем Класс Scanner
 
 public class Cli {
     public static void run() {
-        Scanner scanner = new Scanner(System.in); //Создали объект Scanner
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("May I have your name?"); //Узнать имя игрока
-        String userName = scanner.nextLine(); //Игрок вводит имя и для завершения нажимает Enter
-        System.out.println("Hello, " + userName + "!"); // Приветсвие игрока
+        System.out.println("May I have your name?");
+        String userName = scanner.nextLine();
+        System.out.println("Hello, " + userName + "!");
     }
 }

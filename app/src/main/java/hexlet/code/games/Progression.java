@@ -19,27 +19,27 @@ public class Progression {
         Engine.run(questions, RULES_GAME);
     }
     public static String[] generateRound() {
-        var firstValue = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);  //Первое число
-        var step = Utils.generateRandomNumber(STEP_START, STEP_LIMIT);            //Количесво чисел
-        var count = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);       //Шаг прогрессии
-        var hid = Utils.generateRandomNumber(step);                               //Индекс значения которое нужно скрыть
+        var firstValue = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);
+        var lengthArray = Utils.generateRandomNumber(STEP_START, STEP_LIMIT);
+        var step = Utils.generateRandomNumber(START_RANDOM, LIMIT_RANDOM);
+        var hidTheValue = Utils.generateRandomNumber(lengthArray);
 
-        var progression = generateProgression(firstValue, step, count);
-        var answer = progression[hid];                                            //Сохраняем верное значение
-        progression[hid] = "..";                                                  //Скрываем это значение для вопроса
-        var progressionString = String.join(" ", progression);            //Преобразуем массив в строку
+        var progression = generateProgression(firstValue, lengthArray, step);
+        var answer = progression[hidTheValue];
+        progression[hidTheValue] = "..";
+        var progressionString = String.join(" ", progression);
 
         return new String[]{progressionString, answer};
     }
 
-    private static String[] generateProgression(int firstValue, int step, int count) {
-        String[] progressionArray = new String[step];                             //Создаем массив прогресии
+    private static String[] generateProgression(int firstValue, int lengthArray, int step) {
+        String[] progressionArray = new String[lengthArray];
         int nextNumber = firstValue;
 
         //Наполняем массив числами прогрессии
-        for (int i = 0; i < step; i++) {
+        for (int i = 0; i < lengthArray; i++) {
             progressionArray[i] = String.valueOf(nextNumber);
-            nextNumber += count;
+            nextNumber += step;
         }
         return progressionArray;
     }
