@@ -2,13 +2,13 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-
+    public static final String QUESTION_USER_NAME = "May I have your name?";
     public static final int ROUNDS_COUNT = 3;
 
     public static void run(String[][] rounds, String rulesGame) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("May I have your name?");
+        System.out.println(QUESTION_USER_NAME);
         String userName = scanner.nextLine();
         System.out.println("Hello, " + userName + "!");
 
