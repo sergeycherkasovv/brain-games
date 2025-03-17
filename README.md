@@ -1,5 +1,5 @@
-# Игры разума
-## Пять консольных игр, для проверки логического мышления и знания арифметики
+# Brain Games
+## A set of five console games based on the principles of popular mobile apps for brain training. Each game asks questions that require correct answers. After three correct answers, the game is considered completed. Incorrect answers end the game and offer the player to try again.
 
 ## Run-dist
 
@@ -7,16 +7,21 @@
 make run-dist
 ```
 
+## Games:
+### Even
+[![asciicast](https://asciinema.org/a/Zj9FJBsuyLuDTekoNl6HdrR6p.svg)](https://asciinema.org/a/Zj9FJBsuyLuDTekoNl6HdrR6p)
 
-### [Video game Even](https://asciinema.org/a/Zj9FJBsuyLuDTekoNl6HdrR6p)
+### Calc
+[![asciicast](https://asciinema.org/a/JdaQ6dSBPyO31ssxYJQksztsn.svg)](https://asciinema.org/a/JdaQ6dSBPyO31ssxYJQksztsn)
 
-### [Video game Calc](https://asciinema.org/a/JdaQ6dSBPyO31ssxYJQksztsn)
+### GDC
+[![asciicast](https://asciinema.org/a/tLVZJJBQBG6oX7IjiWnZEsU1z.svg)](https://asciinema.org/a/tLVZJJBQBG6oX7IjiWnZEsU1z)
 
-### [Video game GCD](https://asciinema.org/a/tLVZJJBQBG6oX7IjiWnZEsU1z)
+### Progression
+[![asciicast](https://asciinema.org/a/zQR1KAS9XJB7AXoN4ATJMVoXX.svg)](https://asciinema.org/a/zQR1KAS9XJB7AXoN4ATJMVoXX)
 
-### [Video game Progression](https://asciinema.org/a/zQR1KAS9XJB7AXoN4ATJMVoXX)
-
-### [Video game Prime](https://asciinema.org/a/vLUc3UJGKjHJsXXZ5muai74zC)
+### Prime
+[![asciicast](https://asciinema.org/a/vLUc3UJGKjHJsXXZ5muai74zC.svg)](https://asciinema.org/a/vLUc3UJGKjHJsXXZ5muai74zC)
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/sergeycherkasovv/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/sergeycherkasovv/java-project-61/actions)
