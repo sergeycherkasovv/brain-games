@@ -1,5 +1,5 @@
 # Brain Games
-## A set of five console games based on the principles of popular mobile apps for brain training. Each game asks questions that require correct answers. After three correct answers, the game is considered completed. Incorrect answers end the game and offer the player to try again.
+A set of five console games based on the principles of popular mobile apps for brain training. Each game asks questions that require correct answers. After three correct answers, the game is considered completed. Incorrect answers end the game and offer the player to try again.
 
 ## Run-dist
 
