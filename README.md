@@ -1,3 +1,6 @@
+### Hexlet tests and linter status:
+[![Actions Status](https://github.com/sergeycherkasovv/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/sergeycherkasovv/java-project-61/actions)
+
 # Brain Games
 A set of five console games based on the principles of popular mobile apps for brain training. Each game asks questions that require correct answers. After three correct answers, the game is considered completed. Incorrect answers end the game and offer the player to try again.
 
@@ -22,9 +25,3 @@ make run-dist
 
 ### Prime
 [![asciicast](https://asciinema.org/a/vLUc3UJGKjHJsXXZ5muai74zC.svg)](https://asciinema.org/a/vLUc3UJGKjHJsXXZ5muai74zC)
-
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/sergeycherkasovv/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/sergeycherkasovv/java-project-61/actions)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/644fe54243088980957b/maintainability)](https://codeclimate.com/github/sergeycherkasovv/java-project-61/maintainability)
-[![hexlet-check](https://github.com/sergeycherkasovv/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/sergeycherkasovv/java-project-61/actions/workflows/hexlet-check.yml)
